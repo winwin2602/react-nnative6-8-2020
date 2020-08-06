@@ -26,10 +26,10 @@ class FoodForm extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Redux</Text>
+        <Text style={{ fontSize: 22, marginBottom: 32 }}>Welcome Admin</Text>
         <TextInput
           value={this.state.food}
-          placeholder='Name'
+          placeholder='Enter food name'
           style={styles.foodInput}
           onChangeText={(food) => this.setState({ food })}
         />
@@ -45,7 +45,7 @@ class FoodForm extends Component {
           style={{ marginBottom: 16 }}
           onPress={() =>
             this.props.navigation.navigate('FoodList')}>
-          <Text style={{ fontSize: 22 }}>Go to FoodList</Text>
+          <Text style={{ fontSize: 22 }}>See FoodList</Text>
         </TouchableOpacity>
       </View>
     );
@@ -60,11 +60,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
-    fontSize: 64,
-    marginBottom: 48
+    fontSize: 40,
+    marginBottom: 48,
+    alignItems: 'center',
   },
   foodInput: {
-    fontSize: 32,
+    fontSize: 15,
     marginBottom: 32,
     borderWidth: 1,
     padding: 8,
